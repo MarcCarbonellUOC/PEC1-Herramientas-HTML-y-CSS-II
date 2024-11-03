@@ -2,47 +2,38 @@
   "extends": [
     "stylelint-config-recommended-scss",
     "stylelint-config-recess-order"
-   ],
-   "plugins": [
+  ],
+  "plugins": [
     "stylelint-use-logical",
-    "stylelint-color-contrast",
-    "stylelint-no-unsupported-browser-features"
+    "stylelint-scss",
+    "@stylistic/stylelint-plugin"
   ],
   "rules": {
-    "identation": 2,
-    "selector-list-comma-newline-after": "always",
-    "block-opening-brace-space-before": "always",
-    "block-closing-brace-newline-after": "always",
-    "declaration-colon-space-after": "always",
-    "declaration-block-semicolon-newline-after": "always",
-    "declaration-block-trailing-semicolon": "always",
-    "value-list-comma-space-after": "always",
-    "color-function-notation": "space-separated",
-    "number-leading-zero": "never",
-    "color-hex-case": "lower", 
+    "@stylistic/indentation": 2,
+    "@stylistic/selector-list-comma-newline-after": "always",
+    "@stylistic/block-opening-brace-space-before": "always",
+    "@stylistic/block-closing-brace-newline-after": "always",
+    "@stylistic/declaration-colon-space-after": "always",
+    "@stylistic/declaration-block-semicolon-newline-after": "always",
+    "@stylistic/declaration-block-trailing-semicolon": "always",
+    "@stylistic/value-list-comma-space-after": "always",
+    "@stylistic/number-leading-zero": "never",
+    "@stylistic/color-hex-case": "lower", 
     "color-hex-length": "short",
     "selector-attribute-quotes": "always",
     "length-zero-no-unit": true,
     "csstools/use-logical": "always",
-    "color-format/format": {
-      "format": "modern"
-    },
-    "color-contrast/minimum-contrast": [
-      {
-        "threshold": 4.5
-      }
-    ],
+    "color-function-notation": "modern",
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["use", "forward"]
+      "ignoreAtRules": ["use", "forward", "function", "return"]
     }],
-    "at-rule-disallowed-list": ["import"],
+    "scss/at-import-partial-extension-allowed-list": ["main.scss"],
     "shorthand-property-no-redundant-values": true,
     "max-nesting-depth": 2,
     "selector-max-compound-selectors": 3,
-    "selector-max-specificity": "0,1,0",
+    "selector-max-specificity": "0,2,0",
     "selector-max-id": 0,
     "declaration-no-important": true,
-    "max-declarations": 10,
     "comment-no-empty": true,
     "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$"
   }

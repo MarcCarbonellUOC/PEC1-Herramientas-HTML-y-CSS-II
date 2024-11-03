@@ -1,24 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="stylesheet" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Mi Comarca</title>
   </head>
   <body>
-    <div class="uoc-container">
+    <include src="./views/header.html"></include>
+    <div class="home">
+      <h1>Área metropolitana de Santa Cruz de Tenerife</h1>
+      <p class="home__text">
+        El Área metropolitana de Santa Cruz de Tenerife-La Laguna1​ es un área urbana española localizada en el
+        extremo más oriental de la isla canaria de Tenerife. Con un total de 448 689 habitantes (INE 2022),​ se
+        trata del decimosexto núcleo urbano de España, el segundo del archipiélago tras el área de Las Palmas
+        de Gran Canaria y una de las tres áreas metropolitanas que se encuentran en Tenerife, junto a las de
+        Tenerife Sur y Valle de La Orotava.
+      </p>
       <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
+        <source srcset="./assets/images/comarcas_de_tenerife.png?width=350" type="image/webp">
+        <img  class="home__image" src="./assets/images/comarcas_de_tenerife.png?width=350" alt="Mapa de las comarcas de Tenerife">
       </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
+      <p class="home__text">
+        El corazón del área metropolitana se articula entre las ciudades de Santa Cruz de Tenerife (capital de
+        la isla y cocapital de Canarias) y San Cristóbal de La Laguna. Ambas ciudades se encuentran físicamente
+        y urbanísticamente unidas, por lo que juntas tendrían una población de aproximadamente 365.000 habitantes.
+        ​La definición oficial del área viene marcada por la planificación territorial del Cabildo Insular de
+        Tenerife y recibe el nombre de Comarca del Área Metropolitana.​ Según esta definición, el área está formada
+        por los municipios de Santa Cruz de Tenerife, San Cristóbal de La Laguna, El Rosario y Tegueste, en los que
+        residen 395.612 habitantes (ISTAC 2022).
+      </p>
+      <p class="home__text">
+        Debido al crecimiento demográfico experimentado en las últimas décadas, ​el Área Metropolitana de la capital
+        tinerfeña ha desbordado su comarca original y se extiende, desde un punto de vista demográfico y funcional,
+        por las vecinas comarcas de Acentejo y el Valle de Güimar.
       </p>
     </div>
     <include src="./views/footer.html"></include>
